@@ -1,0 +1,26 @@
+全局样式表
+html,body,#app{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 1366px;
+}
+
+
+.el-breadcrumb,.el-row,.el-table{
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+.el-card{
+  box-shadow: 0 1px 1px rgb(0,0,0,0.15) !important;
+}
+
+/* 控制级联选择器的长度 */
+.el-scrollbar__wrap {
+  height: 300px !important;
+}
+
+/* 给添加商品的字体调整 */
+.el-step__title{
+  font-size: 12px;
+}

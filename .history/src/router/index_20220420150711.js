@@ -1,0 +1,89 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import HomeView from '../views/HomeView.vue'
+
+import ZMWK from '../components/vue-zmwk.vue'
+import Login from '../components/vue-shop/Login.vue'
+import XiaoMiShangCheng from '../components/XiaoMiShangCheng.vue'
+import KeFuZhuShou from '../components/KeFuZhuShou.vue'
+import ZMWK from '../components/vue-zmwk.vue'
+
+Vue.use(VueRouter)
+
+const routes = [
+  
+  {
+    path: '/',
+    name: 'home',
+    component: HomeView
+  },
+  {
+    path:'/zmwk',
+    name:'ZMWK',
+    // component: () => import(/* webpackChunkName: "ZMWK" */ '../components/vue-zmwk.vue')
+    component:ZMWK
+  },
+  {
+    path:'/login',
+    name:'Login',
+    // component: () => import(/* webpackChunkName: "Login" */ '../components/vue-shop/Login.vue')
+    component:Login
+  },
+  {
+    path:'/home',
+    component: () => import(/* webpackChunkName: "Home" */ '../components/vue-shop/Home.vue'),
+    redirect:'/welcome',
+    children:[
+      {
+        path:'/welcome',
+        component: () => import(/* webpackChunkName: "Welcome" */ '../components/vue-shop/Welcome.vue')
+      },
+      {
+        path:'/users',
+        component: () => import(/* webpackChunkName: "Users" */ '../components/vue-shop/user/Users.vue')
+      },
+      {
+        path:'/rights',
+        component: () => import(/* webpackChunkName: "Rights" */ '../components/vue-shop/power/Rights.vue')
+      },
+      {
+        path:'/roles',
+        component: () => import(/* webpackChunkName: "Roles" */ '../components/vue-shop/power/Roles.vue')
+      },
+      {
+        path:'/categories',
+        component: () => import(/* webpackChunkName: "Cate" */ '../components/vue-shop/goods/Cate.vue')
+      },
+      {
+        path:'/params',
+        component: () => import(/* webpackChunkName: "Params" */ '../components/vue-shop/goods/Params.vue')
+      },
+      {
+        path:'/goods',
+        component: () => import(/* webpackChunkName: "List" */ '../components/vue-shop/goods/List.vue')
+      },
+      {
+        path:'/goods/add',
+        component: () => import(/* webpackChunkName: "Add" */ '../components/vue-shop/goods/Add.vue')
+      }
+    ]
+  },  
+  {
+    path:'/xiaomishangcheng',
+    name:'XiaoMiShangCheng',
+    // component: () => import(/* webpackChunkName: "XiaoMiShangCheng" */ '../components/XiaoMiShangCheng.vue')
+    component:XiaoMiShangCheng
+  },
+  {
+    path:'/kefuzhushou',
+    name:'KeFuZhuShou',
+    // component: () => import(/* webpackChunkName: "KeFuZhuShou" */ '../components/KeFuZhuShou.vue')
+    component:KeFuZhuShou
+  },
+]
+
+const router = new VueRouter({
+  routes
+})
+
+export default router
