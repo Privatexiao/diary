@@ -326,14 +326,15 @@ export default {
       // if (browserWidth >= 500) {
       //   element.style.minWidth = ''
       // }
+      
     },
   },
   beforeDestroy() {
-    // location.reload()
     
-    this.$router.go(0)
+    // location.reload()
+    // this.$router.go(0)
+    
   },
-
 }
 </script>
 

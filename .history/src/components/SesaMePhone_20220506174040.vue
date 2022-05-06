@@ -307,33 +307,28 @@ export default {
 
     // 获取浏览器的窗口大小
     handleScroll() {
-      // let browserWidth =
-      //   window.innerWidth ||
-      //   document.documentElement.clientWidth ||
-      //   document.body.clientWidth
+      let browserWidth =
+        window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth;
 
-      // let element = document.querySelector('.element.style')
       // let elMenu = document.querySelector('.el-menu');
-      let Html = document.documentElement
-      let Body = document.body
-      let App = document.querySelector('#app')
+      let Html = document.documentElement;
+      let Body = document.body;
+      let App = document.querySelector('#app');
 
       // elMenu.style.width = 375 + 'px'
       // Html.style.width = 375 + 'px'
       Html.style.minWidth = 375 + 'px'
       Body.style.minWidth = 375 + 'px'
       App.style.minWidth = 375 + 'px'
-      // if (browserWidth >= 500) {
-      //   element.style.minWidth = ''
-      // }
+      if(browserWidth >= 500){
+         Html.style.minWidth = 375 + 'px'
+      Body.style.minWidth = 375 + 'px'
+      App.style.minWidth = 375 + 'px'
+      }
     },
   },
-  beforeDestroy() {
-    // location.reload()
-    
-    this.$router.go(0)
-  },
-
 }
 </script>
 
@@ -651,6 +646,7 @@ export default {
   border-radius: 16px;
   background: #cccccc;
 }
+
 
 /* Bright_spot功能亮点 */
 .Bright_spot {

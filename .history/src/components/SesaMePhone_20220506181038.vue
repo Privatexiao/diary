@@ -330,10 +330,15 @@ export default {
   },
   beforeDestroy() {
     // location.reload()
-    
     this.$router.go(0)
   },
-
+  inject: ['reload'],   // 这里得引入，像使用mixin一样
+	watch: {
+    "$route.params.id": {
+        handler(val) {
+          this.reload()     //直接调用,强制刷新页面
+        }
+      },
 }
 </script>
 

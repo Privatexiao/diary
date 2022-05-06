@@ -330,10 +330,12 @@ export default {
   },
   beforeDestroy() {
     // location.reload()
-    
-    this.$router.go(0)
+    // this.$router.go(0)
+    this.isRouterAlive = false
+    this.$nextTick(function () {
+      this.isRouterAlive = true
+    })
   },
-
 }
 </script>
 

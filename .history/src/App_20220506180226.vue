@@ -39,13 +39,27 @@
         <a href="https://github.com/Privatexiao" target="_blank">GitHub</a>
       </el-menu-item>
     </el-menu>
-    <router-view></router-view>
+    <router-view v-if="isRouterAlive"></router-view>
   </div>
 </template>
 
 <script>
 export default {
   name: 'App',
+  provide(){
+    
+  }
+  data(){
+    return{
+isRouterAlive:false
+    }
+  },
+  methods:{
+    this.isRouterAlive = false
+    this.$nextTick(function () {
+      this.isRouterAlive = true
+      })
+    }
   
 }
 </script>

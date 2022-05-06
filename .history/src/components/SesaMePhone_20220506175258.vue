@@ -307,10 +307,10 @@ export default {
 
     // 获取浏览器的窗口大小
     handleScroll() {
-      // let browserWidth =
-      //   window.innerWidth ||
-      //   document.documentElement.clientWidth ||
-      //   document.body.clientWidth
+      let browserWidth =
+        window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth
 
       // let element = document.querySelector('.element.style')
       // let elMenu = document.querySelector('.el-menu');
@@ -326,14 +326,15 @@ export default {
       // if (browserWidth >= 500) {
       //   element.style.minWidth = ''
       // }
+      
     },
   },
   beforeDestroy() {
+    let element = document.querySelector('.element.style')
     // location.reload()
-    
-    this.$router.go(0)
+    // this.$router.go(0)
+    element.style.minWidth = ''
   },
-
 }
 </script>
 

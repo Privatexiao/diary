@@ -216,6 +216,7 @@
 <script>
 export default {
   name: 'SesaMePhone',
+  inject: ['reload'], 
   data() {
     return {
       sectionArr: [
@@ -330,7 +331,8 @@ export default {
   },
   beforeDestroy() {
     // location.reload()
-    
+    // this.$router.go(0)
+    this.reload()
     this.$router.go(0)
   },
 

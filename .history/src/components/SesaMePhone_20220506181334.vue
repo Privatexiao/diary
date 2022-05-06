@@ -330,7 +330,6 @@ export default {
   },
   beforeDestroy() {
     // location.reload()
-    
     this.$router.go(0)
   },
 

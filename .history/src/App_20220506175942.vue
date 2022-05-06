@@ -39,18 +39,18 @@
         <a href="https://github.com/Privatexiao" target="_blank">GitHub</a>
       </el-menu-item>
     </el-menu>
-    <router-view></router-view>
+    <router-view v-if=""></router-view>
   </div>
 </template>
 
 <script>
 export default {
   name: 'App',
-  
 }
 </script>
 
 <style>
+
 body,
 html {
   padding: 0;
