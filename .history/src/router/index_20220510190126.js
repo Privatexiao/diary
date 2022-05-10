@@ -86,9 +86,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "SesaMePhone" */ '../components/SesaMePhone.vue')
   },
   {
-    path:'/xiaowei',
-    name:'XiaoWei',
-    component: () => import(/* webpackChunkName: "XiaoWei" */ '../components/XiaoWei.vue')
+    path:'/sesamephone',
+    name:'SesaMePhone',
+    component: () => import(/* webpackChunkName: "SesaMePhone" */ '../components/SesaMePhone.vue')
   }
 ]
 

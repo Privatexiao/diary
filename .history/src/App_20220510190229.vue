@@ -29,7 +29,7 @@
           ><router-link to="/sesamephone">芝麻小客服移动端</router-link>
         </el-menu-item>
         <el-menu-item index="2-6"
-          ><router-link to="/xiaowei">小微助手</router-link>
+          ><router-link to="/sesamephone">芝麻小客服移动端</router-link>
         </el-menu-item>
       </el-submenu>
       <el-menu-item index="3" disabled>Stop</el-menu-item>

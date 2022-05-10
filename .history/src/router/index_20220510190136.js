@@ -87,8 +87,8 @@ const routes = [
   },
   {
     path:'/xiaowei',
-    name:'XiaoWei',
-    component: () => import(/* webpackChunkName: "XiaoWei" */ '../components/XiaoWei.vue')
+    name:'Xiao',
+    component: () => import(/* webpackChunkName: "SesaMePhone" */ '../components/SesaMePhone.vue')
   }
 ]
 
