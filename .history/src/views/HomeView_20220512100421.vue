@@ -54,7 +54,7 @@
         <p>利用了HTML和Css,javaScript，vue-cil框架，vant移动库</p>
         <span
           >这个是适配了移动端的一个网页，使用的是自适应布局，百分百宽度，
-          这个页面主要是写一下适配移动端的问题了的
+          这个页面算
         </span>
       </el-card>
       <el-card class="box-card">
