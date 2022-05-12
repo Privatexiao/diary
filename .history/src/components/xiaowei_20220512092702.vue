@@ -227,65 +227,34 @@ export default {
     handleScroll() {
       let scrollTop =
         document.documentElement.scrollTop || document.body.scrollTops
-      // 获取浏览器的宽度
-      let windowWidth = document.documentElement.clientWidth
+
       let micros = document.querySelectorAll('.micro')
-      // 如果宽度小于600说明是移动端的
-      if (windowWidth < 600) {
-        if (scrollTop > 600) {
-          let micro_s1 = micros[0].querySelector('.micro_s')
-          let micro_img1 = micros[0].querySelector('img')
-          micro_s1.classList.add('right')
-          micro_img1.classList.add('left')
-        }
-        if (scrollTop > 1280) {
-          let micro_s2 = micros[1].querySelector('.micro_s')
-          let micro_img2 = micros[1].querySelector('img')
-          let micro_img22 = micros[1].querySelectorAll('img')[1]
-          micro_s2.classList.add('right')
-          micro_img2.classList.add('left')
-          micro_img22.classList.add('left')
-        }
-        if (scrollTop > 2020) {
-          let micro_s2 = micros[2].querySelector('.micro_s')
-          let micro_img2 = micros[2].querySelector('img')
-          micro_s2.classList.add('right')
-          micro_img2.classList.add('left')
-        }
-        if (scrollTop > 2630) {
-          let micro_s2 = micros[3].querySelector('.micro_s')
-          let micro_img2 = micros[3].querySelector('img')
-          let micro_img22 = micros[3].querySelectorAll('img')[1]
-          micro_s2.classList.add('right')
-          micro_img2.classList.add('left')
-          micro_img22.classList.add('left')
-        }
-      } else {
-        if (scrollTop > 850) {
-          let micro_s1 = micros[0].querySelector('.micro_s')
-          let micro_img1 = micros[0].querySelector('img')
-          micro_s1.classList.add('right')
-          micro_img1.classList.add('left')
-        }
-        if (scrollTop > 1450) {
-          let micro_s2 = micros[1].querySelector('.micro_s')
-          let micro_img2 = micros[1].querySelector('img')
-          micro_s2.classList.add('right')
-          micro_img2.classList.add('left')
-        }
-        if (scrollTop > 2100) {
-          let micro_s2 = micros[2].querySelector('.micro_s')
-          let micro_img2 = micros[2].querySelector('img')
-          micro_s2.classList.add('right')
-          micro_img2.classList.add('left')
-        }
-        if (scrollTop > 2750) {
-          let micro_s2 = micros[3].querySelector('.micro_s')
-          let micro_img2 = micros[3].querySelector('img')
-          micro_s2.classList.add('right')
-          micro_img2.classList.add('left')
-        }
+
+      if (scrollTop > 850) {
+        let micro_s1 = micros[0].querySelector('.micro_s')
+        let micro_img1 = micros[0].querySelector('img')
+        micro_s1.classList.add('right')
+        micro_img1.classList.add('left')
       }
+      if (scrollTop > 1450) {
+        let micro_s2 = micros[1].querySelector('.micro_s')
+        let micro_img2 = micros[1].querySelector('img')
+        micro_s2.classList.add('right')
+        micro_img2.classList.add('left')
+      }
+      if (scrollTop > 2100) {
+        let micro_s2 = micros[2].querySelector('.micro_s')
+        let micro_img2 = micros[2].querySelector('img')
+        micro_s2.classList.add('right')
+        micro_img2.classList.add('left')
+      }
+      if (scrollTop > 2750) {
+        let micro_s2 = micros[3].querySelector('.micro_s')
+        let micro_img2 = micros[3].querySelector('img')
+        micro_s2.classList.add('right')
+        micro_img2.classList.add('left')
+      }
+
       // 底部动态添加
       let footer_p = document.querySelector('.footer_7').querySelector('p')
       let footer_btn = document
@@ -458,9 +427,9 @@ export default {
   height: 32px;
   padding: 15px 0;
   background: rgb(255, 255, 255);
-  /* position: fixed; */
-  position: absolute;
-  /* top: 62px; */
+  position: fixed;
+  /* position: absolute; */
+  top: 62px;
   /* left: 0; */
   /* z-index: 999; */
 }
@@ -737,7 +706,6 @@ export default {
     border-radius: 10px;
     width: 96%;
     margin-left: 2%;
-    margin-top: 70px;
   }
   .housekeeper_s {
     padding: 7% 0 0 4%;
@@ -773,7 +741,6 @@ export default {
   /* 标题 */
   .xiaowei > h1 {
     font-size: 19px;
-    animation: ups 1s linear;
   }
   /* 整个内容的div */
   .xiaowei_form {

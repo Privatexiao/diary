@@ -232,13 +232,13 @@ export default {
       let micros = document.querySelectorAll('.micro')
       // 如果宽度小于600说明是移动端的
       if (windowWidth < 600) {
-        if (scrollTop > 600) {
+        if (scrollTop > 650) {
           let micro_s1 = micros[0].querySelector('.micro_s')
           let micro_img1 = micros[0].querySelector('img')
           micro_s1.classList.add('right')
           micro_img1.classList.add('left')
         }
-        if (scrollTop > 1280) {
+        if (scrollTop > 1330) {
           let micro_s2 = micros[1].querySelector('.micro_s')
           let micro_img2 = micros[1].querySelector('img')
           let micro_img22 = micros[1].querySelectorAll('img')[1]
@@ -246,13 +246,13 @@ export default {
           micro_img2.classList.add('left')
           micro_img22.classList.add('left')
         }
-        if (scrollTop > 2020) {
+        if (scrollTop > 2070) {
           let micro_s2 = micros[2].querySelector('.micro_s')
           let micro_img2 = micros[2].querySelector('img')
           micro_s2.classList.add('right')
           micro_img2.classList.add('left')
         }
-        if (scrollTop > 2630) {
+        if (scrollTop > 2680) {
           let micro_s2 = micros[3].querySelector('.micro_s')
           let micro_img2 = micros[3].querySelector('img')
           let micro_img22 = micros[3].querySelectorAll('img')[1]

@@ -232,13 +232,13 @@ export default {
       let micros = document.querySelectorAll('.micro')
       // 如果宽度小于600说明是移动端的
       if (windowWidth < 600) {
-        if (scrollTop > 600) {
+        if (scrollTop > 650) {
           let micro_s1 = micros[0].querySelector('.micro_s')
           let micro_img1 = micros[0].querySelector('img')
           micro_s1.classList.add('right')
           micro_img1.classList.add('left')
         }
-        if (scrollTop > 1280) {
+        if (scrollTop > 1330) {
           let micro_s2 = micros[1].querySelector('.micro_s')
           let micro_img2 = micros[1].querySelector('img')
           let micro_img22 = micros[1].querySelectorAll('img')[1]
